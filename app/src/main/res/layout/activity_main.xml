@@ -8,9 +8,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="115dp"
-        android:layout_height="53dp"
+        android:layout_width="178dp"
+        android:layout_height="57dp"
         android:text="Hello World!"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintLeft_toLeftOf="parent"
