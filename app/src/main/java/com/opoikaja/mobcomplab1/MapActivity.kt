@@ -83,7 +83,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 return@setOnClickListener
             }
             if(selectedLocation==null) {
-                toast("Please select location")
+                toast("Please select a location")
                 return@setOnClickListener
             }
             val reminder = Reminder(uid=null, time=null, location=String.format("%.3f,%.3f", selectedLocation.latitude, selectedLocation.longitude), message = reminderText)
@@ -100,9 +100,9 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
                 //setAlarm(reminder.location!!, reminder.message)
 
-                finish()
-            }
 
+            }
+            finish()
 
         }
     }
