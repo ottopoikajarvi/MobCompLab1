@@ -4,7 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
 
     <application
         android:allowBackup="true"
@@ -24,6 +24,7 @@
         </activity>
 
         <receiver android:name=".ReminderReceiver" android:exported="true"/>
+        <receiver android:name=".GeofenceReceiver" android:exported="true"/>
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBWVx1QG0jQptB8XI9BZcReQy5yTikUiqg"/>

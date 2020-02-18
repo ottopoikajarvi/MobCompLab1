@@ -11,22 +11,23 @@ class ReminderReceiver : BroadcastReceiver(){
     override fun onReceive(context: Context, intent: Intent) {
 
         val text = intent.getStringExtra("message")
+        val uid = intent.getIntExtra("uid", 0)
 
         context.toast(text!!)
 
         MainActivity.showNotification(context, text!!)
 
-        /*doAsync {
+        doAsync {
 
             val db = Room.databaseBuilder(
                 context,
                 AppDatabase::class.java,
                 "reminders"
             ).build()
-            db.reminderDao()
+            db.reminderDao().delete(uid)
             db.close()
         }
 
-         */
+
     }
 }
