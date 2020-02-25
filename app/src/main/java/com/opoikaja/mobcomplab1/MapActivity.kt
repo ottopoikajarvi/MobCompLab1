@@ -113,7 +113,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 val marker=addMarker(MarkerOptions().position(location).snippet(title).title(city))
                 marker.showInfoWindow()
 
-                addCircle(CircleOptions().center(location).strokeColor(Color.argb(50,70,70,70)).fillColor(Color.GREEN))
+                addCircle(CircleOptions().center(location).strokeColor(Color.argb(50,70,70,70)).fillColor(Color.GREEN).radius(GEOFENCE_RADIUS.toDouble()))
                 selectedLocation = location
             }
         }
