@@ -104,8 +104,8 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 try {
                     val addressList =
                         geocoder.getFromLocation(location.latitude, location.longitude, 1)
-                    city = addressList.get(0).locality
-                    title=addressList.get(0).getAddressLine(0)
+                    city = addressList[0].locality
+                    title= addressList[0].getAddressLine(0)
                 }
                 catch (e:Exception) {
 

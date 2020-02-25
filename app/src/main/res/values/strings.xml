@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MobCompLab1</string>
+    <string name="searchtext">Search .....</string>
 </resources>
