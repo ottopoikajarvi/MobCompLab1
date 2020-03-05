@@ -33,7 +33,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
 
     val GEOFENCE_ID="REMINDER_GEOFENCE_ID"
     val GEOFENCE_RADIUS=500
-    val GEOFENCE_EXPIRATION=120*24*60*60*1000
+    val GEOFENCE_EXPIRATION=10368000000
     val GEOFENCE_DWELL_DELAY=2*60*1000
 
     private fun createGeofence(selectedLocation: LatLng, reminder: Reminder, geofencingClient: GeofencingClient){
@@ -113,7 +113,7 @@ class MapActivity : AppCompatActivity(), OnMapReadyCallback {
                 val marker=addMarker(MarkerOptions().position(location).snippet(title).title(city))
                 marker.showInfoWindow()
 
-                addCircle(CircleOptions().center(location).strokeColor(Color.argb(50,70,70,70)).fillColor(Color.GREEN).radius(GEOFENCE_RADIUS.toDouble()))
+                addCircle(CircleOptions().center(location).strokeColor(Color.argb(100,20,70,20)).fillColor(Color.argb(50,20,70,20)).radius(GEOFENCE_RADIUS.toDouble()))
                 selectedLocation = location
             }
         }
